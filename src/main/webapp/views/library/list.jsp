@@ -243,7 +243,7 @@
                 <jsp:include page="../common/pagination.jsp" />
             </nav>
             </div>
-        </div>    
+        </div>
     </div>   
 </div>
 <jsp:include page="../common/footer.jsp" />
