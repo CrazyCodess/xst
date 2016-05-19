@@ -38,29 +38,11 @@
                         <dl id="select1">
 
                             <dt>学段：</dt>
-                            <c:choose>
-                            <c:when test="${id ==0 }">
-                                <c:set var="selectedOfClass" value="select-all selected"></c:set>
-                            </c:when>
-                                <c:when test="${id ==1 }">
-                                    <c:set var="selectedOfClass1" value="select-all selected"></c:set>
-                                </c:when>
-                                <c:when test="${id ==2 }">
-                                    <c:set var="selectedOfClass2" value="select-all selected"></c:set>
-                                </c:when>
-                                <c:when test="${id ==3 }">
-                                    <c:set var="selectedOfClass3" value="select-all selected"></c:set>
-                                </c:when>
-                                <c:when test="${id ==4 }">
-                                    <c:set var="selectedOfClass4" value="select-all selected"></c:set>
-                                </c:when>
-                            </c:choose>
-                            <dd class="${selectedOfClass}"><a href="${rootPath}/library/list">全部</a></dd>
-                            <dd class="${selectedOfClass1}"><a href="${rootPath}/library/1">学前</a></dd>
-                            <dd class="${selectedOfClass2}"><a href="${rootPath}/library/2">小学</a></dd>
-                            <dd class="${selectedOfClass3}"><a href="${rootPath}/library/3">初中</a></dd>
-                            <dd class="${selectedOfClass4}"><a href="${rootPath}/library/4">高中</a></dd>
-                        <%--<a href="${rootPath}/library/list">全部</a>--%>
+                            <dd data-value="0" ><a href="${rootPath}/library/list">全部</a></dd>
+                            <dd data-value="1" ><a href="${rootPath}/library/1">学前</a></dd>
+                            <dd data-value="2" ><a href="${rootPath}/library/2">小学</a></dd>
+                            <dd data-value="3" ><a href="${rootPath}/library/3">初中</a></dd>
+                            <dd data-value="4" ><a href="${rootPath}/library/4">高中</a></dd>
 
                         </dl>
                     </li>
@@ -68,62 +50,61 @@
 
 
                     <li class="select-list">
-                        <dl id="select2">
+                        <dl id="select2" name="select2">
 
                                 <dt>学科：</dt>
-                                <dd class='select-all selected' data-num='0'><a href='${rootPath}/library/list/${id}'>全部</a></dd>
+                                <dd <%--class='select-all selected'--%> data-value='0'><a href='${rootPath}/library/list/${id}'>全部</a></dd>
                                 <c:choose>
                                     <c:when test="${empty docCategory.children}" >
                                         <c:choose>
                                             <c:when test="${id ==5||id==6}">
-
-                                                <dd data-num="5" ><a href="${rootPath}/library/5">学前语文</a></dd>
-                                                <dd  data-num="6"><a href="${rootPath}/library/6">学前数学</a></dd>
+                                                <dd data-value="5" ><a href="${rootPath}/library/5">学前语文</a></dd>
+                                                <dd  data-value="6"><a href="${rootPath}/library/6">学前数学</a></dd>
                                             </c:when>
 
                                             <c:when test="${id >=7&&id<=9}">
 
-                                                <dd date-num="7"><a href="${rootPath}/library/7">小学语文</a></dd>
-                                                <dd date-num="8"><a href="${rootPath}/library/8">小学数学</a></dd>
-                                                <dd date-num="9"><a href="${rootPath}/library/9">小学英语</a></dd>
+                                                <dd data-value="7"><a href="${rootPath}/library/7">小学语文</a></dd>
+                                                <dd data-value="8"><a href="${rootPath}/library/8">小学数学</a></dd>
+                                                <dd data-value="9"><a href="${rootPath}/library/9">小学英语</a></dd>
                                             </c:when>
 
                                           <c:when test="${id >=10&&id<=18}">
 
 
-                                                <dd date-num="10"><a href="${rootPath}/library/10">初中语文</a></dd>
-                                                <dd date-num="11"><a href="${rootPath}/library/11">初中数学</a></dd>
-                                                <dd date-num="12"><a href="${rootPath}/library/12">初中英语</a></dd>
-                                                <dd date-num="13"><a href="${rootPath}/library/13">初中物理</a></dd>
-                                                <dd date-num="14"><a href="${rootPath}/library/14">初中化学</a></dd>
-                                                <dd date-num="15"><a href="${rootPath}/library/15">初中生物</a></dd>
-                                                <dd date-num="16"><a href="${rootPath}/library/16">初中政治</a></dd>
-                                                <dd date-num="17"><a href="${rootPath}/library/17">初中历史</a></dd>
-                                                <dd date-num="18"><a href="${rootPath}/library/18">初中地理</a></dd>
+                                                <dd data-value="10"><a href="${rootPath}/library/10">初中语文</a></dd>
+                                                <dd data-value="11"><a href="${rootPath}/library/11">初中数学</a></dd>
+                                                <dd data-value="12"><a href="${rootPath}/library/12">初中英语</a></dd>
+                                                <dd data-value="13"><a href="${rootPath}/library/13">初中物理</a></dd>
+                                                <dd data-value="14"><a href="${rootPath}/library/14">初中化学</a></dd>
+                                                <dd data-value="15"><a href="${rootPath}/library/15">初中生物</a></dd>
+                                                <dd data-value="16"><a href="${rootPath}/library/16">初中政治</a></dd>
+                                                <dd data-value="17"><a href="${rootPath}/library/17">初中历史</a></dd>
+                                                <dd data-value="18"><a href="${rootPath}/library/18">初中地理</a></dd>
                                             </c:when>
 
                                             <c:when test="${id >=19&&id<=28}">
-                                                <dd date-num="19"><a href="${rootPath}/library/19">高中语文</a></dd>
-                                                <dd date-num="20"><a href="${rootPath}/library/20">高中数学</a></dd>
-                                                <dd date-num="21"><a href="${rootPath}/library/21">高中英语</a></dd>
-                                                <dd date-num="22"><a href="${rootPath}/library/22">高中物理</a></dd>
-                                                <dd date-num="23"><a href="${rootPath}/library/23">高中化学</a></dd>
-                                                <dd date-num="24"><a href="${rootPath}/library/24">高中生物</a></dd>
-                                                <dd date-num="25"><a href="${rootPath}/library/25">高中政治</a></dd>
-                                                <dd date-num="26"><a href="${rootPath}/library/26">高中历史</a></dd>
-                                                <dd date-num="27"><a href="${rootPath}/library/27">高中地理</a></dd>
-                                                <dd date-num="28"><a href="${rootPath}/library/28">信息技术</a></dd>
+                                                <dd data-value="19"><a href="${rootPath}/library/19">高中语文</a></dd>
+                                                <dd data-value="20"><a href="${rootPath}/library/20">高中数学</a></dd>
+                                                <dd data-value="21"><a href="${rootPath}/library/21">高中英语</a></dd>
+                                                <dd data-value="22"><a href="${rootPath}/library/22">高中物理</a></dd>
+                                                <dd data-value="23"><a href="${rootPath}/library/23">高中化学</a></dd>
+                                                <dd data-value="24"><a href="${rootPath}/library/24">高中生物</a></dd>
+                                                <dd data-value="25"><a href="${rootPath}/library/25">高中政治</a></dd>
+                                                <dd data-value="26"><a href="${rootPath}/library/26">高中历史</a></dd>
+                                                <dd data-value="27"><a href="${rootPath}/library/27">高中地理</a></dd>
+                                                <dd data-value="28"><a href="${rootPath}/library/28">信息技术</a></dd>
                                             </c:when>
 
                                             <c:otherwise>
-                                                <dd data-num="5" ><a href="${rootPath}/library/5">学前语文</a></dd>
-                                                <dd data-num="5"><a href="${rootPath}/library/6">学前数学</a></dd>
+                                                <dd data-value="5" ><a href="${rootPath}/library/5">学前语文</a></dd>
+                                                <dd data-value="5"><a href="${rootPath}/library/6">学前数学</a></dd>
                                             </c:otherwise>
                                         </c:choose>
                                     </c:when>
                                     <c:otherwise>
                                         <c:forEach items="${docCategory.children}" var="firstCate">
-                                            <dd data-num="${firstCate.id}"><a href="${rootPath}/library/${firstCate.id}">${firstCate.name}</a></dd>
+                                            <dd data-value="${firstCate.id}"><a href="${rootPath}/library/${firstCate.id}">${firstCate.name}</a></dd>
                                         </c:forEach>
                                     </c:otherwise>
                                 </c:choose>
@@ -265,16 +246,48 @@
 
     <script type="text/javascript">
         function display(){
-            var all_options = $(".submenu li");
-           // alert(all_options.length);
-            for (var i=0; i<all_options.length; i++){
-                if ($(all_options[i]).attr("data-value")=="${id}")
+            //var all_options = $(".submenu li");
+            var dll0=document.getElementById("select1");
+            var alldd0=dll0.getElementsByTagName('dd');
+            var dll = document.getElementById("select2");
+            var alldd=dll.getElementsByTagName('dd');
+            //console.log(alldd.length);
+            for(var i=0;i<alldd0.length;i++){
+                if ($(alldd0[i]).attr("data-value")=="${id}"){
+                    $(alldd0[i]).addClass("select-all selected");
+                    $(alldd[0]).removeClass('');
+                }
+
+            }
+            if(i>alldd0.length){
+                $(alldd0[0]).addClass('select-all selected');
+            }
+
+            for (var i=0; i<alldd.length; i++){
+                if ($(alldd[i]).attr("data-value")=="${id}")
                 {
+                    if("${id}">=5&&"${id}"<=6){
+                        $(alldd0[1]).addClass("select-all selected");
+                    }
+                    else if("${id}">=7&&"${id}"<=9){
+                        $(alldd0[2]).addClass("select-all selected");
+                    }
+                    else if("${id}">=10&&"${id}"<=18){
+                        $(alldd0[3]).addClass("select-all selected");
+                    }
+                    else if("${id}">=19&&"${id}"<=28){
+                        $(alldd0[4]).addClass("select-all selected");
+                    }
                     //alert("active");
-                    $(all_options[i]).addClass("active");
+                    $(alldd[i]).addClass("select-all selected");
 //                                all_options[i].selected = true;
+                    $(alldd[0]).removeClass('');
+                    console.log("all长度"+alldd.length);
                     break;
                 }
+            }
+            if(i>=alldd.length){
+                $(alldd[0]).addClass('select-all selected');
             }
         };
         display();

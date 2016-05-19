@@ -122,7 +122,7 @@ public class AdminController {
 
 
     @RequestMapping(value = "/library/add" ,method = RequestMethod.POST)
-    public String addLibrary(Model model,String doctype ,int cate1,int  cate2,MultipartFile doc){
+    public String addLibrary(Model model,String doctype ,int cate1,int  cate2,MultipartFile doc,HttpSession session){
 
         System.out.println("file size : "+doc.getSize());
 
@@ -131,7 +131,9 @@ public class AdminController {
 
         }
 
-
+        System.out.println("===session=="+session.getServletContext().getRealPath("/"));
+        //session.getServletContext().getRealPath("/");
+        System.out.println("===libraryadd==");
         return "redirect:/admin/library/list";
     }
 

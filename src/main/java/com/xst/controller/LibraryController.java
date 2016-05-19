@@ -39,8 +39,6 @@ public class LibraryController {
             docCategory = categoryDao.getDocCategory(id);
         }
         Page<LessonDocument> docPage = docDao.queryAllDocPage(pageNum,15,id);
-
-        System.out.println("页数"+docPage.getTotalPageCount());
         model.addAttribute("docCategory",docCategory);
         model.addAttribute("page",docPage);
         model.addAttribute("currentPage", pageNum);
@@ -55,9 +53,6 @@ public class LibraryController {
         int pageNum = page == null ? 1 : Integer.valueOf(page);
         DocCategory docCategory = categoryDao.getDocCategory(id);
         Page<LessonDocument> docPage = docDao.queryDocPage(pageNum,15,id);
-        System.out.println("子节点大小"+/*docCategory.getChildren().size()*/
-                "=====文件页数："+docPage.getList().size()+" "+docPage.getTotalPageCount());
-        System.out.println("页数"+docPage.getTotalPageCount());
         model.addAttribute("docCategory",docCategory);
         model.addAttribute("page",docPage);
         model.addAttribute("currentPage", pageNum);

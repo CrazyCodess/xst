@@ -67,27 +67,27 @@
                             <option value="4">高中</option>
                         </select>
                         <span id="sp">阶&nbsp;&nbsp;段</span>
-                        <select class="form-control" id="first-category-select" name="cate2" >
-                            <option value="5">学前语文</option>
-                            <option value="6">学前数学</option>
+                        <select class="form-control">
+                            <option value="学前语文">学前语文</option>
+                            <option value="学前数学">学前数学</option>
                         </select>
-                        <select class="form-control" id="second-category-select" name="cate2" >
-                            <option value="7">小学语文</option>
-                            <option value="8">小学数学</option>
-                            <option value="9">小学英语</option>
+                        <select class="form-control">
+                            <option value="小学语文">小学语文</option>
+                            <option value="小学数学">小学数学</option>
+                            <option value="小学英语">小学英语</option>
                         </select>
-                        <select class="form-control" id="third-category-select" name="cate2" >
-                            <option value="10">初中语文</option>
-                            <option value="11">初中数学</option>
-                            <option value="12">初中英语</option>
-                            <option value="13">初中物理</option>
-                            <option value="14">初中化学</option>
-                            <option value="15">初中生物</option>
-                            <option value="16">初中政治</option>
-                            <option value="17">初中历史</option>
-                            <option value="18">初中地理</option>
+                        <select class="form-control">
+                            <option value="初中语文">初中语文</option>
+                            <option value="初中数学">初中数学</option>
+                            <option value="初中英语">初中英语</option>
+                            <option value="初中物理">初中物理</option>
+                            <option value="初中化学">初中化学</option>
+                            <option value="初中生物">初中生物</option>
+                            <option value="初中政治">初中政治</option>
+                            <option value="初中历史">初中历史</option>
+                            <option value="初中地理">初中地理</option>
                         </select>
-                        <select class="form-control" id="fourth-category-select" name="cate2">
+                        <select class="form-control">
                             <option value="19">高中语文</option>
                             <option value="20">高中数学</option>
                             <option value="21">高中英语</option>
@@ -99,6 +99,7 @@
                             <option value="27">高中地理</option>
                             <option value="28">信息技术</option>
                         </select>
+
 
                     </div>
                 </div>
@@ -126,9 +127,21 @@
         }
         sp.style.display='none';
         document.getElementById("category").addEventListener("change",function(){
+            var index = Number(this.value);
             sp.style.display = 'inline-block';
             //console.log(this.value);
-            if(this.value=="1"){
+            for(var i=1; i<selects.length; i++){
+                selects[i].style.display = 'none';
+                selects[i].removeAttribute('name');
+            }
+            selects[index].style.display = 'inline-block';
+            console.log("index"+index);
+            selects[0].setAttribute("name","cate1");
+            selects[index].setAttribute("name","cate2");
+
+
+
+/*            if(this.value=="1"){
                 for(var i=1;i<selects.length;i++){
                     selects[i].style.display = 'none';
                 }
@@ -165,7 +178,7 @@
                     selects[i].style.display = 'none';
                     sp.style.display='none';
                 }
-            }
+            }*/
         },false);
     }
 </script>

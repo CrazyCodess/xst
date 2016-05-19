@@ -7,7 +7,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "lesson_category", schema = "db_xst_new", catalog = "")
-public class LessonCategory {
+public class LessonCategory{
     private int id;
     private Integer docId;
     private String catname;
