@@ -99,6 +99,12 @@ public class AdminController {
         return "redirect:/admin/resource/list";
     }
 
+    /**
+     * 文库列表
+     * @param model
+     * @param page
+     * @return
+     */
     @RequestMapping(value = "/library/list" , method = RequestMethod.GET)
     public String listLibrary(Model model,String page){
 
@@ -112,6 +118,11 @@ public class AdminController {
         return "admin/library/librarylist";
     }
 
+    /**
+     * 文库添加
+     * @param model
+     * @return
+     */
     @RequestMapping(value = "/library/add" ,method = RequestMethod.GET)
     public String addLibrary(Model model){
 
@@ -120,9 +131,18 @@ public class AdminController {
         return "admin/library/libraryadd";
     }
 
-
+    /**
+     * 文库添加
+     * @param doctype
+     * @param cate1
+     * @param cate2
+     * @param doc
+     * @param session
+     * @param redirectAttributes
+     * @return
+     */
     @RequestMapping(value = "/library/add" ,method = RequestMethod.POST)
-    public String addLibrary(Model model,String doctype ,int cate1,int  cate2,MultipartFile doc,HttpSession session){
+    public String addLibrary(String doctype ,int cate1,int  cate2,MultipartFile doc,HttpSession session,RedirectAttributes redirectAttributes){
 
         System.out.println("file size : "+doc.getSize());
 
@@ -134,6 +154,7 @@ public class AdminController {
         System.out.println("===session=="+session.getServletContext().getRealPath("/"));
         //session.getServletContext().getRealPath("/");
         System.out.println("===libraryadd==");
+        redirectAttributes.addFlashAttribute("Msg","添加成功！");
         return "redirect:/admin/library/list";
     }
 

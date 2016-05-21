@@ -68,37 +68,37 @@
                         </select>
                         <span id="sp">阶&nbsp;&nbsp;段</span>
                         <select class="form-control">
-                            <option value="学前语文">学前语文</option>
-                            <option value="学前数学">学前数学</option>
+                            <option value="5">学前语文</option>
+                            <option value="6">学前数学</option>
                         </select>
                         <select class="form-control">
-                            <option value="小学语文">小学语文</option>
-                            <option value="小学数学">小学数学</option>
-                            <option value="小学英语">小学英语</option>
+                             <option value="7">小学语文</option>
+                             <option value="8">小学数学</option>
+                             <option value="9">小学英语</option>
                         </select>
                         <select class="form-control">
-                            <option value="初中语文">初中语文</option>
-                            <option value="初中数学">初中数学</option>
-                            <option value="初中英语">初中英语</option>
-                            <option value="初中物理">初中物理</option>
-                            <option value="初中化学">初中化学</option>
-                            <option value="初中生物">初中生物</option>
-                            <option value="初中政治">初中政治</option>
-                            <option value="初中历史">初中历史</option>
-                            <option value="初中地理">初中地理</option>
-                        </select>
-                        <select class="form-control">
-                            <option value="19">高中语文</option>
-                            <option value="20">高中数学</option>
-                            <option value="21">高中英语</option>
-                            <option value="22">高中物理</option>
-                            <option value="23">高中化学</option>
-                            <option value="24">高中生物</option>
-                            <option value="25">高中政治</option>
-                            <option value="26">高中历史</option>
-                            <option value="27">高中地理</option>
-                            <option value="28">信息技术</option>
-                        </select>
+                             <option value="10">初中语文</option>
+                             <option value="11">初中数学</option>
+                             <option value="12">初中英语</option>
+                             <option value="13">初中物理</option>
+                             <option value="14">初中化学</option>
+                             <option value="15">初中生物</option>
+                             <option value="16">初中政治</option>
+                             <option value="17">初中历史</option>
+                             <option value="18">初中地理</option>
+                         </select>
+                         <select class="form-control">
+                             <option value="19">高中语文</option>
+                             <option value="20">高中数学</option>
+                             <option value="21">高中英语</option>
+                             <option value="22">高中物理</option>
+                             <option value="23">高中化学</option>
+                             <option value="24">高中生物</option>
+                             <option value="25">高中政治</option>
+                             <option value="26">高中历史</option>
+                             <option value="27">高中地理</option>
+                             <option value="28">信息技术</option>
+                         </select>
 
 
                     </div>
