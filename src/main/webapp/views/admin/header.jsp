@@ -6,7 +6,7 @@
   <div class="navbar-header">
     <a class="" href="${rootPath}/admin/index">
             <span class="navbar-brand">
-                <span class="fa fa-book"></span> 校视通
+                <span class="fa fa-book"></span> 博客管理系统
             </span>
     </a>
   </div>

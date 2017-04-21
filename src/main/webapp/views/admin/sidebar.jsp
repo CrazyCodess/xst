@@ -15,7 +15,7 @@
         <li><a href="${rootPath}/admin/verify/list"><span class="fa fa-caret-right"></span> 注册审核</a></li>
       </ul>
     </li>
-    <li>
+<%--    <li>
       <a href="#" data-target="resourceManage" class="nav-header">
         <i class="fa fa-folder"></i> 资源管理<i class="fa fa-collapse"></i>
       </a>
@@ -30,19 +30,19 @@
         <li><a href="${rootPath}/admin/resource/add"><span class="fa fa-caret-right"></span> 课程添加</a></li>
         <li><a href="${rootPath}/admin/library/add"><span class="fa fa-caret-right"></span> 文库添加</a></li>
       </ul>
-    </li>
+    </li>--%>
 
-    <li>
+<%--    <li>
       <a href="#" data-target="dashboard-menu3" class="nav-header">
         <i class="fa fa-fw fa-group"></i>&nbsp;&nbsp;小组管理<i class="fa fa-collapse"></i>
       </a>
-    </li>
+    </li>--%>
     <li>
       <ul class="dashboard-menu3 nav nav-list" style="display: none;border-bottom: 1px solid #ccc;">
         <li><a href="#"><span class="fa fa-caret-right"></span>小组1</a></li>
       </ul>
     </li>
     <li><a href="${rootPath}/admin/news/list" data-target="dashboard-menu4" class="nav-header">
-      <i class="fa fa-fw fa-volume-up"></i>&nbsp;&nbsp;资讯管理</a></li>
+      <i class="fa fa-fw fa-volume-up"></i>&nbsp;&nbsp;博客管理</a></li>
   </ul>
 </div>

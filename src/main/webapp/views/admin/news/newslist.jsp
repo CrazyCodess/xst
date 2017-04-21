@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>校视通</title>
+    <title>博客管理</title>
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -41,17 +41,17 @@
                 <div class="advisory-manage-content">
 
                     <div class="row button-group">
-                        <div class="col-md-3">
+  <%--                      <div class="col-md-3">
                             <button id="allChoose" class="btn btn-sm btn-info">全选</button>
                             <button id="toggleChoose" class="btn btn-sm btn-info">反选</button>
                             <button id="allDel" class="btn btn-sm btn-danger"><i class="fa fa-trash-o"></i>批量删除</button>
-                        </div>
+                        </div>--%>
                         <div class="col-md-4">
                             <a href="${rootPath}/views/admin/news/addNews.jsp" ><button class="btn btn-sm btn-info"><i class="fa fa-plus"></i>&nbsp;新增</button></a>
-                            <button class="btn btn-sm btn-info"><i class="fa fa-share"></i>&nbsp;导入</button>
-                            <button class="btn btn-sm btn-info"><i class="fa fa-share fa-rotate-180"></i>&nbsp;导出</button>
+                          <%--  <button class="btn btn-sm btn-info"><i class="fa fa-share"></i>&nbsp;导入</button>
+                            <button class="btn btn-sm btn-info"><i class="fa fa-share fa-rotate-180"></i>&nbsp;导出</button>--%>
                         </div>
-                        <div class="col-md-4">
+ <%--                       <div class="col-md-4">
                             <form class="form-group" action="" method="post">
                                 <div class="input-group">
                                     <span class="input-group-addon" id="basic-addon1"><i class="fa fa-search"></i>搜索</span>
@@ -61,11 +61,11 @@
                                 <button class="btn btn-sm btn-warning pull-right">查询</button>
                                 <div class="clearfix"></div>
                             </form>
-                        </div>
-                        <div class="col-md-1">
+                        </div>--%>
+<%--                        <div class="col-md-1">
                             <button class="btn btn-sm btn-warning pull-right">高级查询</button>
-                            <div class="clearfix"></div>
-                        </div>
+                            <div class="clearfix"></div>--%>
+                       <%-- </div>--%>
                     </div>
 
                     <div class="row">

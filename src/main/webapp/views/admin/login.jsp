@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>校视通</title>
+    <title>博客管理系统</title>
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -26,7 +26,7 @@
             <div class="navbar-header">
                 <a class="" href="${rootPath}/index">
             <span class="navbar-brand">
-                <span class="fa fa-book"></span> 校视通
+                <span class="fa fa-book"></span> 博客管理系统
             </span>
                 </a>
             </div>
